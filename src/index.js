@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import { ThemeProvider } from './Context';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 ReactDOM.render(
-    <App />,
+  <ThemeProvider>
+      <App /> 
+  </ThemeProvider>
+    ,
   document.getElementById('root')
 );
 
